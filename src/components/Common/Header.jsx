@@ -1,4 +1,3 @@
-
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -16,7 +15,8 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 container mx-auto">
+   <section>
+     <div className="navbar bg-base-100 mx-auto md:px-12 py-4 px-4 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,6 +53,7 @@ const Header = () => {
         <a className="btn bg-primary text-white">Start Applying</a>
       </div>
     </div>
+   </section>
   );
 };
 

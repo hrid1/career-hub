@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import JobCard from "../Common/JobCard";
 
 const FeatureJobs = () => {
 
@@ -10,8 +11,8 @@ const FeatureJobs = () => {
     }, [])
 
   return (
-    <section>
-      <div className="mx-auto text-center my-6">
+    <section className="container mx-auto my-4">
+      <div className="mx-auto text-center my-8">
         <h2 className="text-4xl font-bold text-gray-800">
           Feature Job List {jobs.length}
         </h2>
@@ -22,8 +23,10 @@ const FeatureJobs = () => {
       </div>
 
       {/* jobs */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center w-11/12 mx-auto ">
+        {
+            jobs.map(job => <JobCard key={job.id} job={job}></JobCard>)
+        }
       </div>
     </section>
   );

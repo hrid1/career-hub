@@ -9,7 +9,7 @@ const CategoryList = () => {
       .then((data) => setCategories(data));
   }, []);
   return (
-    <section className="container mx-auto my-10 px-2">
+    <section className="container mx-auto my-10 px-2 w-11/12">
       <div className="mx-auto text-center my-6">
         <h2 className="text-4xl font-bold text-gray-800">
           Job Category List {categories.length}

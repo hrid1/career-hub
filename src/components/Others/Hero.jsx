@@ -3,7 +3,7 @@ import image from "../../assets/images/user.png";
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
-    <div>
+    <div className="w-11/12 mx-auto ">
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col-reverse justify-center px-4 mx-auto sm:py-12 md:py-16 md:flex-row md:justify-between">
           <div className="flex flex-col justify-center px-4 text-center rounded-sm md:max-w-md xl:max-w-lg md:text-left ">
