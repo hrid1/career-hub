@@ -1,9 +1,9 @@
-import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineAttachMoney } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const JobCard = ({ job }) => {
-  const { job_title, logo, comapny_name, location, job_type, salary } = job;
+  const { id, job_title, logo, comapny_name, location, job_type, salary } = job;
   return (
     <div className="lg:w-[90%]  border rounded-lg bg-gray-100 p-6 space-y-4">
       <img className="w-40" src={logo} alt="" />
@@ -33,19 +33,13 @@ const JobCard = ({ job }) => {
         </p>
       </div>
 
-      <button className="btn btn-primary opacity-90 font-bold">
-        View Details
-      </button>
+      <NavLink to={`job/${id}`}>
+        <button className="btn btn-primary opacity-90 font-bold mt-4">
+          View Details
+        </button>
+      </NavLink>
     </div>
   );
 };
 
 export default JobCard;
-
-// "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
-//       "job_title": "Technical Database Engineer",
-//       "company_name": "Google LLC",
-//       "remote_or_onsite": "Remote",
-//       "location": "Dhaka, Bangladesh",
-//       "job_type": "Full Time",
-//       "salary": "100k-150k",
